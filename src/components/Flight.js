@@ -23,14 +23,33 @@ import trpu from '../images/trpu.jpg';
 const Flight = () => {
   const [activeSlider, setActiveSlider] = useState('international'); 
 
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slideToScroll: 1,
-    centerMode: true,
-    focusOnSelect: true,
-  };
+const settings = {
+  infinite: true,
+  speed: 500,
+  slidesToShow: 4,      // desktop
+  slidesToScroll: 1,
+  centerMode: true,
+  focusOnSelect: true,
+  responsive: [
+    {
+      breakpoint: 1024,  // below 1024px (tablet)
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        centerMode: false,   // Optional: disable center mode on tablet for better layout
+      }
+    },
+    {
+      breakpoint: 600,   // below 600px (mobile)
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: false,
+      }
+    }
+  ]
+};
+
 
    useEffect(() => {
           document.title = 'Flight - Booking.com';

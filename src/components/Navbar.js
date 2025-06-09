@@ -28,14 +28,9 @@ function Navbar() {
                 <NavLink to="/Home" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Stays</NavLink>
                 <NavLink to="/Flight" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Flight</NavLink>
                 <NavLink to="/Hotel" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Hotel</NavLink>
-                <a href="/CarRental" onClick={toggleNavbar}>Car Rental</a>
-                <a href="/Attractions" onClick={toggleNavbar}>Attractions</a>
+                <NavLink to="/CarRental" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>CarRental</NavLink>
+                <NavLink to="/Attractions" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Attractions</NavLink>
                 <NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Login</NavLink>
-
-                <div className="search-container">
-                    <input type="text" placeholder="Search..." className="search-input" />
-                    <button className="search-btn">Search</button>
-                </div>
 
                 {/* Close icon only shown when nav is open */}
                 <button className="nav-btn nav-close-btn" onClick={toggleNavbar}>

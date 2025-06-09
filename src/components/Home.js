@@ -1,6 +1,6 @@
 import '../components/Home.css';
 import React, {useEffect } from 'react';
-import { useLocation } from 'react-router-dom'; // 🟩 import this
+import { useLocation } from 'react-router-dom'; 
 import Slider from 'react-slick';
 import delhi from '../images/delhi.jpg';
 import munnar from '../images/munnar.jpg';
@@ -30,8 +30,8 @@ const Home = () => {
     { id: 5, title: 'Mumbai', src: mumbai, caption: "1,652 Properties", price: '$150/night', reviews: '4.3 ★ (980 reviews)', content: 'Stay near the bustling city life and sea view.' },
   ];
 
-  const location = useLocation(); // get location object
-  const message = location.state?.message; // extract message
+  const location = useLocation(); 
+  const message = location.state?.message; 
 
    useEffect(() => {
       document.title = 'Home - Booking.com';
@@ -60,26 +60,26 @@ const Home = () => {
     prevArrow: <button className="custom-arrow custom-prev">❮</button>,
     nextArrow: <button className="custom-arrow custom-next">❯</button>,
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
+  {
+    breakpoint: 1024,
+    settings: {
+      slidesToShow: 3,
+    },
+  },
+  {
+    breakpoint: 768,
+    settings: {
+      slidesToShow: 2,
+    },
+  },
+  {
+    breakpoint: 480,
+    settings: {
+      slidesToShow: 1,
+    },
+  },
+]
+  }
 
   return (
     <>

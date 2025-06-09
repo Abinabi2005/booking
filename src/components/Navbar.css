@@ -1,155 +1,133 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Titillium Web', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 :root {
-    --mainColor: #29335c;
-    --mainColorLight: #5767aa;
-    --secondaryColor: #DB2B39;
-    --textColor: #eee;
+  --mainColor: #29335c;
+  --mainColorLight: #5767aa;
+  --secondaryColor: #DB2B39;
+  --textColor: #eee;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100px;
-    padding: 0 2rem;
-    background-color: var(--mainColor);
-    color: var(--textColor);
-    position: relative;
-    z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 1.5rem;
+  background-color: var(--mainColor);
+  color: var(--textColor);
+  position: relative;
+  z-index: 1000;
 }
 
 h2 {
-    font-size: 1.8rem;
+  font-size: 1.6rem;
+  flex: 1;
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    transition: transform 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s ease-in-out;
 }
 
 nav a {
-    margin: 0 1rem;
-    color: var(--textColor);
-    text-decoration: none;
-    font-size: 1.1rem;
+  color: var(--textColor);
+  text-decoration: none;
+  font-size: 1.1rem;
 }
 
 nav a:hover {
-    color: var(--secondaryColor);
+  color: var(--secondaryColor);
 }
 
 .nav-btn {
-    font-size: 1.5rem;
-    background: transparent;
-    border: none;
-    color: var(--textColor);
-    cursor: pointer;
-    z-index: 1001;
+  font-size: 1.8rem;
+  background: transparent;
+  border: none;
+  color: var(--textColor);
+  cursor: pointer;
+  z-index: 1001;
 }
 
-/* Close button inside nav */
-.nav-close-btn {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-}
-
-/* Hamburger (open) button outside nav */
 .nav-open-btn {
-    display: none;
+  display: none;
 }
 
-.search-container {
-    display: flex;
+/* Responsive Nav Overlay (Mobile View) */
+@media screen and (max-width: 1024px) {
+  .nav-open-btn {
+    display: block;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-left: 2rem;
-}
+    height: 100vh;
+    width: 100%;
+    background-color: var(--mainColor);
+    transform: translateY(-100%);
+    z-index: 999;
+    gap: 2rem;
+  }
 
-.search-input {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 0.5rem;
-}
+  nav.responsive_nav {
+    transform: translateY(0);
+  }
 
-.search-btn {
-    padding: 0.5rem 1rem;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.search-btn:hover {
-    background-color: #0056b3;
-}
-
-/* ======= Mobile View (<=1024px) ======= */
-@media screen and (max-width: 1024px) {
-    .nav-open-btn {
-        display: block;
-    }
-
-    nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        width: 100%;
-        background-color: var(--mainColor);
-        transform: translateY(-100%);
-        z-index: 1000;
-        gap: 2rem;
-    }
-
-    nav.responsive_nav {
-        transform: translateY(0);
-    }
-
-    .search-container {
-        display: none;
-    }
-}
-/* Hide close button by default (desktop) */
-.nav-close-btn {
+  .search-container {
     display: none;
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
+  }
 }
 
-/* Show close button only on mobile */
-@media screen and (max-width: 1024px) {
-    .nav-close-btn {
-        display: block;
-    }
+.nav-close-btn {
+  display: none;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
 }
+
+@media screen and (max-width: 1024px) {
+  .nav-close-btn {
+    display: block;
+  }
+}
+
+
 
 .nav-link {
-    margin: 0 1rem;
-    color: var(--textColor);
-    text-decoration: none;
-    font-size: 1.1rem;
+  color: var(--textColor);
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin: 0 1.2rem;
 }
 
 .nav-link:hover {
-    color: var(--secondaryColor);
+  color: var(--secondaryColor);
 }
 
 .nav-link.active {
-    color: var(--secondaryColor);
-    font-weight: bold;
+  color: var(--secondaryColor);
+  font-weight: bold;
+}
+
+.nav-link {
+  margin: 0 1.2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-link {
+    margin: 1rem 0; 
+  }
 }

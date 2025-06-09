@@ -94,4 +94,38 @@
     background-color: #d5d6d6;
   }
   
+  .image-card1 .image1 {
+  width: 90%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10%;
+  transition: transform 0.3s ease-in-out;
+  margin: 0 auto;  /* center images */
+}
+
+@media (max-width: 600px) {
+  .image-card1 .image1 {
+    width: 95%;
+    height: auto; /* auto height to keep aspect ratio on small screens */
+  }
+
+  .container1 h2,
+  .container1 h4,
+  .toggle-btn {
+    margin-left: 20px;  /* smaller margin on mobile */
+    font-size: 18px;
+  }
+
+  .toggle-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .image-card-content1 {
+    font-size: 12px;
+    margin-left: 0;
+  }
+}
+
   
