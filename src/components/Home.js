@@ -30,8 +30,9 @@ const Home = () => {
     { id: 5, title: 'Mumbai', src: mumbai, caption: "1,652 Properties", price: '$150/night', reviews: '4.3 ★ (980 reviews)', content: 'Stay near the bustling city life and sea view.' },
   ];
 
-  const location = useLocation(); 
-  const message = location.state?.message; 
+const location = useLocation(); 
+const message = location.state?.message;
+const username = location.state?.username;
 
    useEffect(() => {
       document.title = 'Home - Booking.com';
@@ -90,12 +91,18 @@ const Home = () => {
           padding: '15px',
           textAlign: 'center',
           fontWeight: 'bold',
-          borderBottom: '1px solid #c3e6cb',
           fontsize:'15px',
         }}>
           {message}
         </div>
       )}
+
+              {username && (
+  <div style={{ textAlign: 'center',fontSize: '15px',backgroundColor: '#29335c', color: '#eee',paddingBottom: '15px' }}>
+    Logged in as: <strong>{username}</strong>
+  </div>
+)}
+
       <div>
         <img src={black} id='blac' alt='banner'/>
       </div>

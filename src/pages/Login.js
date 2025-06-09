@@ -7,7 +7,7 @@ import './Login.css';
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate(); // <-- for navigation
+  const navigate = useNavigate();
 
   useEffect(() => {
     document.title = 'Login - Booking.com';
@@ -16,11 +16,17 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (username === 'abin' && password === '123') {
-      alert("Logged Successfully");
-     navigate('/home', { state: { message: 'Welcome to Booking.com' } });
+    // Allow any username/password and navigate to Home
+    if (username && password) {
+      alert("Logged in successfully");
+      navigate('/home', {
+        state: {
+          message: `Welcome to Booking.com`,
+          username: username
+        }
+      });
     } else {
-      alert('Invalid login credentials');
+      alert('Please enter both username and password');
     }
   };
 

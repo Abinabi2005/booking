@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/booking/static/css/main.82b77918.css",
-    "main.js": "/booking/static/js/main.1a87cad2.js",
+    "main.css": "/booking/static/css/main.6d10d4c5.css",
+    "main.js": "/booking/static/js/main.83e07b2f.js",
     "static/js/453.c908287f.chunk.js": "/booking/static/js/453.c908287f.chunk.js",
     "static/media/ooty.jpg": "/booking/static/media/ooty.4f2c5982e29178f9710d.jpg",
     "static/media/delhi.jpg": "/booking/static/media/delhi.1d08eeafddb838640345.jpg",
@@ -42,12 +42,12 @@
     "static/media/slick.ttf": "/booking/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/booking/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/booking/index.html",
-    "main.82b77918.css.map": "/booking/static/css/main.82b77918.css.map",
-    "main.1a87cad2.js.map": "/booking/static/js/main.1a87cad2.js.map",
+    "main.6d10d4c5.css.map": "/booking/static/css/main.6d10d4c5.css.map",
+    "main.83e07b2f.js.map": "/booking/static/js/main.83e07b2f.js.map",
     "453.c908287f.chunk.js.map": "/booking/static/js/453.c908287f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.82b77918.css",
-    "static/js/main.1a87cad2.js"
+    "static/css/main.6d10d4c5.css",
+    "static/js/main.83e07b2f.js"
   ]
 }
